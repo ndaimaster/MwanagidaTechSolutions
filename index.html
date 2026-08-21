@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mwanagida Tech Solutions | Modern IT & Software Services</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #06b6d4;
+      --bg-dark: #0f172a;
+      --card-bg: #1e293b;
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; scroll-behavior: smooth; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 8%;
+      background: rgba(15, 23, 42, 0.9);
+      position: sticky; top: 0;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #334155;
+      z-index: 100;
+    }
+
+    .logo { font-size: 1.3rem; font-weight: 700; color: #fff; text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 6rem 8% 4rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e3a8a 0%, var(--bg-dark) 70%);
+    }
+
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
+    .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 2rem; }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    .btn-sm {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      margin-top: 1.2rem;
+      border-radius: 6px;
+    }
+    .btn-sm:hover {
+      background: var(--accent);
+      color: var(--bg-dark);
+    }
+
+    .section-title { text-align: center; font-size: 2rem; margin: 4rem 0 2rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 8%;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid #334155;
+      padding: 2rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s ease;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+    .card h3 { color: var(--accent); margin-bottom: 0.75rem; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 3rem auto 5rem;
+      padding: 2.5rem;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-weight: 500; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 0.75rem; border-radius: 6px;
+      border: 1px solid #334155; background: #0f172a; color: white; font-size: 1rem;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #334155;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Media query for mobile adjustments */
+    @media (max-width: 768px) {
+      header { padding: 1.2rem 5%; }
+      nav ul { gap: 1rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .contact-container { margin: 2rem 5%; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#home" class="logo">MWANAGIDA <span>TECH</span> <span>SOLUTIONS</span></a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Book Appointment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Transforming Businesses With Modern Tech</h1>
+    <p>Custom software solutions, networking infrastructures, web applications, and Excel system automation built for performance and growth.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+  <h2 class="section-title" id="services">Our Specialized Services</h2>
+  <div class="services-grid" id="services-container">
+    <!-- Dynamic service box layouts load here -->
+  </div>
+
+  <h2 class="section-title" id="contact">Book Appointment / Apply For Service</h2>
+  <div class="contact-container">
+    <form id="contactForm">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="name" required placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="email" required placeholder="your.email@example.com">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" required placeholder="e.g. 0656113128">
+      </div>
+      <div class="form-group">
+        <label>Service Needed / Applying For</label>
+        <input type="text" id="service" required placeholder="e.g. Excel System, Website, Networking">
+      </div>
+      <div class="form-group">
+        <label>Project Details / Appointment Notes</label>
+        <textarea id="message" rows="4" required placeholder="Tell us about your project requirements"></textarea>
+      </div>
+      <button type="submit" class="btn" style="width: 100%;">Submit Application</button>
+    </form>
+    <p id="responseMsg" style="margin-top: 1rem; color: var(--accent); text-align: center; font-weight: 500;"></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Mwanagida Tech Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Fallback service data
+    const defaultServices = [
+      { title: "Website Development", desc: "Responsive, ultra-fast websites engineered to showcase your brand." },
+      { title: "Networking Solutions", desc: "Reliable setup, configuration, and maintenance for home and business networks." },
+      { title: "Business Applications", desc: "Custom software tailored to solve unique operational bottlenecks." },
+      { title: "Web Applications", desc: "Full-stack web applications with scalable backend architectures." },
+      { title: "Excel Systems & Automation", desc: "Transform messy spreadsheets into automated dashboards and custom VBA systems." }
+    ];
+
+    async function loadServices() {
+      try {
+        const res = await fetch('https://mwanagidatechsolutions.onrender.com/api/services');
+        const data = await res.json();
+        renderServices(data);
+      } catch (err) {
+        renderServices(defaultServices);
+      }
+    }
+
+    function renderServices(list) {
+      const container = document.getElementById('services-container');
+      container.innerHTML = list.map(item => `
+        <div class="card">
+          <div>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </div>
+          <button class="btn btn-sm" onclick="selectService('${item.title}')">Request This Service</button>
+        </div>
+      `).join('');
+    }
+
+    // Auto-fill form and scroll smoothly to the contact section
+    function selectService(serviceName) {
+      document.getElementById('service').value = serviceName;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value
+      };
+
+      const responseMsg = document.getElementById('responseMsg');
+      responseMsg.innerText = "Submitting application...";
+
+      try {
+        const res = await fetch('https://mwanagidatechsolutions.onrender.com/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        responseMsg.innerText = result.message || "Application sent successfully!";
+        if(result.success !== false) e.target.reset();
+      } catch (err) {
+        responseMsg.innerText = "Error connecting to server. Please try again.";
+      }
+    });
+
+    loadServices();
+  </script>
+</body>
+</html>
