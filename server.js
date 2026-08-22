@@ -37,7 +37,7 @@ app.post('/api/contact', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'ndaiaugustino2005@gmail.com',         
-      pass: 'abcdefghijklmnop' // <-- Put your 16-character Google App Password here
+      pass: 'madbfxymopxhrasb' // <-- Put your 16-character Google App Password here
     }
   });
 
