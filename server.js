@@ -1,3 +1,11 @@
+const app = express();
+
+// Tell Express to trust Render's proxy
+app.set('trust proxy', 1);
+
+app.use(cors());
+app.use(express.json());
+
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -34,10 +42,12 @@ app.post('/api/contact', async (req, res) => {
   const { name, email, phone, service, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // Use SSL
     auth: {
       user: 'ndaiaugustino2005@gmail.com',         
-      pass: 'madbfxymopxhrasb' // <-- Put your 16-character Google App Password here
+      pass: 'madbfxymopxhrasb' // <-- Keep your actual App Password here!
     }
   });
 
