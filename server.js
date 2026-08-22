@@ -1,11 +1,3 @@
-const app = express();
-
-// Tell Express to trust Render's proxy
-app.set('trust proxy', 1);
-
-app.use(cors());
-app.use(express.json());
-
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -13,6 +5,10 @@ const rateLimit = require('express-rate-limit');
 const path = require('path');
 
 const app = express();
+
+// Tell Express to trust Render's proxy
+app.set('trust proxy', 1);
+
 app.use(cors());
 app.use(express.json());
 
@@ -47,7 +43,7 @@ app.post('/api/contact', async (req, res) => {
     secure: true, // Use SSL
     auth: {
       user: 'ndaiaugustino2005@gmail.com',         
-      pass: 'madbfxymopxhrasb' // <-- Keep your actual App Password here!
+      pass: 'madbfxymopxhrasb' // Inserted from your screenshot
     }
   });
 
